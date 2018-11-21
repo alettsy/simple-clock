@@ -42,15 +42,15 @@ function draw() {
     }
     pop();
 
+    // minute lines
     push();
     strokeWeight(4);
-    // line((length - 50) / 2 - 36, 0, (length - 50) / 2 - 16, 0);
     for (let i = 0; i < 48; i++) {
         if (i % 4 == 0 && i != 0) {
             rotate(6);
         }
         rotate(6);
-        line((length - 50) / 2 - 36, 0, (length - 50) / 2 - 16, 0);
+        line((length - 50) / 2 - 26, 0, (length - 50) / 2 - 16, 0);
     }
     pop();
 
