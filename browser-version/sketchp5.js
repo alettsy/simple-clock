@@ -42,19 +42,31 @@ function draw() {
     }
     pop();
 
-    // the minute lines
+    // // the minute lines
+    // push();
+    // rotate(-45);
+    // strokeWeight(4);
+    // for (let i = 0; i < 48; i++) {
+    //     line(height / 2, height / 2, height / 2 - 7, height / 2 - 7);
+    //     rotate(6);
+    //     line(height / 2, height / 2, height / 2 - 7, height / 2 - 7);
+    //     rotate(6);
+    //     line(height / 2, height / 2, height / 2 - 7, height / 2 - 7);
+    //     rotate(6);
+    //     line(height / 2, height / 2, height / 2 - 7, height / 2 - 7);
+    //     rotate(6);
+    // }
+    // pop();
+
     push();
-    rotate(-45);
     strokeWeight(4);
+    // line((length - 50) / 2 - 36, 0, (length - 50) / 2 - 16, 0);
     for (let i = 0; i < 48; i++) {
-        line(height / 2, height / 2, height / 2 - 7, height / 2 - 7);
+        if (i % 4 == 0 && i != 0) {
+            rotate(6);
+        }
         rotate(6);
-        line(height / 2, height / 2, height / 2 - 7, height / 2 - 7);
-        rotate(6);
-        line(height / 2, height / 2, height / 2 - 7, height / 2 - 7);
-        rotate(6);
-        line(height / 2, height / 2, height / 2 - 7, height / 2 - 7);
-        rotate(6);
+        line((length - 50) / 2 - 36, 0, (length - 50) / 2 - 16, 0);
     }
     pop();
 
