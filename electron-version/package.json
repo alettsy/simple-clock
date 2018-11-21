@@ -1,0 +1,14 @@
+{
+    "name": "aesthetic-clock",
+    "version": "0.0.1",
+    "description": "A simple, modern, aesthetic clock written in P5.js",
+    "repository": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "electron app.js"
+    },
+    "license": "ISC",
+    "devDependencies": {
+        "electron": "^3.0.2"
+    }
+}
