@@ -18,6 +18,7 @@ app.once('ready', () => {
 
         minHeight: 600,
         minWidth: 600,
+
         // set the title bar style
         titleBarStyle: 'hiddenInset',
         // set the background color to black
@@ -31,6 +32,8 @@ app.once('ready', () => {
         protocol: 'file:',
         slashes: true
     }))
+
+    window.setMenu(null);
 
     window.once('ready-to-show', () => {
         window.show()
