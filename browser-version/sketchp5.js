@@ -24,11 +24,6 @@ function draw() {
     let minutes = minute();
     let seconds = second();
 
-    // // mapping time
-    // hours = map(hours % 12, 0, 12, 0, 360);
-    // minutes = map(minutes, 0, 60, 0, 360);
-    // seconds = map(seconds, 0, 60, 0, 360);
-
     noFill();
     strokeWeight(8);
     stroke(255);
@@ -99,20 +94,19 @@ function draw() {
         stroke(255);
         point(0, 0);
     } else if (analog === false) {
+        // pad time with zeros if single digits
         hours = pad(hours, 2);
         minutes = pad(minutes, 2);
         seconds = pad(seconds, 2);
 
+        // create strings to change style
         var hourString = "<span id=\"hours\">" + hours + "</span>";
         var minuteString = "<span id=\"minutes\">" + minutes + "</span>";
         var secondsString = "<span id=\"seconds\">" + seconds + "</span>";
 
+        // put the time in the div
         document.getElementById('digital-div').innerHTML = hourString + "" + minuteString + "" + secondsString;
     }
-}
-
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
 }
 
 function changeStyle() {
@@ -132,4 +126,12 @@ function pad(n, width, z) {
     z = z || '0';
     n = n + '';
     return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+}
+
+window.onclick = function () {
+    changeStyle();
 }
