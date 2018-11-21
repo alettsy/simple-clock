@@ -6,14 +6,34 @@ body {
 body {
 	margin: 0;
 	display: flex;
-
 	justify-content: center;
-
 	align-items: center;
-
 	overflow: hidden;
 }
 
 #clock-div {
 	text-align: center;
+}
+
+#digital-div {
+	text-align: center;
+	font-family: 'Segment7Standard';
+	font-size: 1700%;
+}
+
+@font-face {
+	font-family: Segment7Standard;
+	src: url('./Segment7Standard.otf') format('opentype');
+}
+
+#hours {
+	color: rgb(229, 160, 32);
+}
+
+#minutes {
+	color: rgb(32, 111, 229);
+}
+
+#seconds {
+	color: rgb(218, 19, 221);
 }
