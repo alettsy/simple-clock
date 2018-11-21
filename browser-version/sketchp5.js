@@ -42,22 +42,6 @@ function draw() {
     }
     pop();
 
-    // // the minute lines
-    // push();
-    // rotate(-45);
-    // strokeWeight(4);
-    // for (let i = 0; i < 48; i++) {
-    //     line(height / 2, height / 2, height / 2 - 7, height / 2 - 7);
-    //     rotate(6);
-    //     line(height / 2, height / 2, height / 2 - 7, height / 2 - 7);
-    //     rotate(6);
-    //     line(height / 2, height / 2, height / 2 - 7, height / 2 - 7);
-    //     rotate(6);
-    //     line(height / 2, height / 2, height / 2 - 7, height / 2 - 7);
-    //     rotate(6);
-    // }
-    // pop();
-
     push();
     strokeWeight(4);
     // line((length - 50) / 2 - 36, 0, (length - 50) / 2 - 16, 0);
