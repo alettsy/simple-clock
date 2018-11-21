@@ -1,14 +1,24 @@
 {
     "name": "aesthetic-clock",
-    "version": "0.0.1",
-    "description": "A simple, modern, aesthetic clock written in P5.js",
-    "repository": "",
+    "version": "1.0.0",
+    "description": "A simple, modern, aesthetic clock written with P5.js!",
     "main": "app.js",
     "scripts": {
         "start": "electron app.js"
     },
-    "license": "ISC",
+    "build": {
+        "appId": "com.alexbetts.aesthetic_clock",
+        "productName": "Aesthetic Clock"
+    },
+    "repository": "",
+    "keywords": [
+        "Electron",
+        "Aesthetic",
+        "Clock"
+    ],
+    "author": "Alex Betts",
+    "license": "MIT",
     "devDependencies": {
-        "electron": "^3.0.2"
+        "electron": "^2.0.0"
     }
 }
