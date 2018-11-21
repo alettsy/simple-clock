@@ -1,15 +1,20 @@
-let linesConstant = 0.21333335;
+//let linesConstant = 0.21333335;
 let handOffset = 0;
+let test = 0;
+let length = 0;
 
-function setup(){
+function setup() {
     createCanvas(750, 750);
+    //createCanvas(500, 500);
     angleMode(DEGREES);
-    linesConstant *= height;
-	
-	// can add to div: canvas.parent('ID-OF-ELEMENT');
+    //linesConstant *= height;
+
+    // can add to div: canvas.parent('ID-OF-ELEMENT');
+
+    test = height * 0.26666666666;
 }
 
-function draw(){
+function draw() {
     background(25, 25, 25);
     translate(height / 2, width / 2);
     rotate(-90);
@@ -27,13 +32,12 @@ function draw(){
     noFill();
     strokeWeight(8);
     stroke(255);
-    let length = height - 50;
+    length = height - 50;
 
-    // the hour lines
+    // hour lines
     push();
-    rotate(-45);
     for (let i = 0; i < 12; i++) {
-        line(height / 2 - linesConstant, height / 2 - linesConstant, height / 2 - linesConstant - 20, height / 2 - linesConstant - 20); // height / 2 - 160
+        line((length - 50) / 2 - 46, 0, (length - 50) / 2 - 16, 0);
         rotate(30);
     }
     pop();
@@ -43,13 +47,13 @@ function draw(){
     rotate(-45);
     strokeWeight(4);
     for (let i = 0; i < 48; i++) {
-        line(height / 2 - linesConstant, height / 2 - linesConstant, height / 2 - linesConstant - 7, height / 2 - linesConstant - 7);
+        line(height / 2, height / 2, height / 2 - 7, height / 2 - 7);
         rotate(6);
-        line(height / 2 - linesConstant, height / 2 - linesConstant, height / 2 - linesConstant - 7, height / 2 - linesConstant - 7);
+        line(height / 2, height / 2, height / 2 - 7, height / 2 - 7);
         rotate(6);
-        line(height / 2 - linesConstant, height / 2 - linesConstant, height / 2 - linesConstant - 7, height / 2 - linesConstant - 7);
+        line(height / 2, height / 2, height / 2 - 7, height / 2 - 7);
         rotate(6);
-        line(height / 2 - linesConstant, height / 2 - linesConstant, height / 2 - linesConstant - 7, height / 2 - linesConstant - 7);
+        line(height / 2, height / 2, height / 2 - 7, height / 2 - 7);
         rotate(6);
     }
     pop();
@@ -60,6 +64,7 @@ function draw(){
     arc(0, 0, length, length, 0, seconds, OPEN);
 
     push();
+    strokeWeight(4);
     rotate(seconds);
     line(0, 0, length / 3, 0);
     pop();
